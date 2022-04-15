@@ -1,0 +1,22 @@
+{
+  "name": "loancalculator",
+  "version": "1.0.0",
+  "description": "A development tour of the loan calculator project",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MargaBover/LoanCalculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MargaBover/LoanCalculator/issues"
+  },
+  "homepage": "https://github.com/MargaBover/LoanCalculator#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
