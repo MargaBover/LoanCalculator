@@ -6,8 +6,11 @@ const durationText = document.getElementById("durationText");
 const totalAmountRepayable = document.getElementById(
   "totalAmountRepayableText"
 );
+const monthlyPaymentText = document.getElementById("monthlyPaymentText");
+const interestRateText = document.getElementById("interestRateText");
 let loanAmount;
 let loanDurationMonths;
+let interestRate = 0.05;
 
 const initForm = () => {
   const defaultLoanAmount = 2000;
@@ -33,6 +36,8 @@ const initForm = () => {
   loanDurationTextBox.value = String(defaultLoanDurationMonths);
   loanDurationTextBox.min = String(minLoanDurationMonths);
   loanDurationTextBox.max = String(maxLoanDurationMonths);
+
+  updateLoanStats();
 };
 
 const updateloanAmount = (value) => {
@@ -65,20 +70,18 @@ const updateLoanDuration = (value) => {
 };
 
 const updateLoanStats = () => {
-  const loanStat = computeLoan(loanAmount, loanDurationMonths, 0.05);
-  totalAmountRepayable.innerHTML = loanStat.totalOwned;
+  const loanStat = computeLoan(loanAmount, loanDurationMonths, interestRate);
+  totalAmountRepayable.innerHTML = `£ ${loanStat.totalOwned}`;
+  monthlyPaymentText.innerHTML = `£ ${loanStat.monthlyRepayment}`;
+  interestRateText.innerHTML = `${interestRate * 100} %`;
 };
 
 const computeLoan = (loanAmount, durationMonths, anualInterestRate) => {
   const totalAmountRepayable =
     loanAmount * Math.pow(1 + anualInterestRate, durationMonths / 12);
   return {
-    monthlyRepayment: totalAmountRepayable / durationMonths,
-    totalOwned: totalAmountRepayable,
-    duration: {
-      years: Math.floor(durationMonths / 12),
-      months: Math.floor(durationMonths % 12),
-    },
+    monthlyRepayment: Math.ceil(totalAmountRepayable / durationMonths),
+    totalOwned: Math.ceil(totalAmountRepayable),
   };
 };
 

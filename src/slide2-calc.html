@@ -4,26 +4,69 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@200;400&family=Nothing+You+Could+Do&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
-    <div>
-      <form class="loan-calc-form">
-        <label for="loanAmountBox">£</label>
-        <input type="number" name="" id="loanAmountBox" />
-        <input type="range" id="loanAmountSlider" />
-      </form>
-      <form class="loan-calc-form">
-        <input type="number" name="" id="loanDurationBox" />
-        <label for="loanDurationBox">months</label>
-        <label for="labelDurationBox" id="durationText"></label>
-        <input type="range" id="loanDurationSlider" />
-      </form>
-    </div>
+    <ul class="horizontal gray">
+      <li><a class="active" href="">Introduction</a></li>
+      <li><a href="">Dia 2</a></li>
+      <li><a href="">Dia 3</a></li>
+      <li><a href="">Dia 4</a></li>
+      <li><a href="">Dia 5</a></li>
+    </ul>
+    <h1>Loan Calculator</h1>
+    <div class="amount-time-loan">
+      <div class="amount-time">
+        <form class="loan-calc-form">
+          <p>How much do you need?</p>
+          <label for="loanAmountBox">£</label>
+          <input
+            type="number"
+            name=""
+            id="loanAmountBox"
+            class="loan-calc-form-input"
+          />
+          <input
+            type="range"
+            id="loanAmountSlider"
+            class="loan-calc-form-input"
+          />
+        </form>
+        <form class="loan-calc-form">
+          <p>How long do you want to pay it back?</p>
+          <input
+            type="number"
+            name=""
+            id="loanDurationBox"
+            class="loan-calc-form-input"
+          />
+          <label for="loanDurationBox">months</label>
+          <label for="labelDurationBox" id="durationText"></label>
+          <input
+            type="range"
+            id="loanDurationSlider"
+            class="loan-calc-form-input"
+          />
+        </form>
+      </div>
 
-    <div>
-      <div>Total amount repayable:</div>
-      <div id="totalAmountRepayableText"></div>
+      <div class="loan-amount">
+        <p>Total amount repayable:</p>
+        <p id="totalAmountRepayableText"></p>
+        <hr />
+        <p>Monthly payment:</p>
+        <p id="monthlyPaymentText"></p>
+        <hr />
+        <p>Annual interest rate:</p>
+        <p id="interestRateText"></p>
+      </div>
     </div>
 
     <script src="loanCalc.js"></script>
