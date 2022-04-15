@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <form class="loan-calc-form">
+        <label for="loanAmountBox">£</label>
+        <input type="number" name="" id="loanAmountBox" />
+        <input type="range" id="loanAmountSlider" />
+      </form>
+      <form class="loan-calc-form">
+        <input type="number" name="" id="loanDurationBox" />
+        <label for="loanDurationBox">months</label>
+        <label for="labelDurationBox" id="durationText"></label>
+        <input type="range" id="loanDurationSlider" />
+      </form>
+    </div>
+
+    <div>
+      <div>Total amount repayable:</div>
+      <div id="totalAmountRepayableText"></div>
+    </div>
+
+    <script src="loanCalc.js"></script>
+  </body>
+</html>
