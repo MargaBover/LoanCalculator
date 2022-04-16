@@ -76,15 +76,6 @@ const updateLoanStats = () => {
   interestRateText.innerHTML = `${interestRate * 100} %`;
 };
 
-const computeLoan = (loanAmount, durationMonths, anualInterestRate) => {
-  const totalAmountRepayable =
-    loanAmount * Math.pow(1 + anualInterestRate, durationMonths / 12);
-  return {
-    monthlyRepayment: Math.ceil(totalAmountRepayable / durationMonths),
-    totalOwned: Math.ceil(totalAmountRepayable),
-  };
-};
-
 loanAmountSlider.addEventListener("change", (event) =>
   updateloanAmount(loanAmountSlider.value)
 );
@@ -101,4 +92,4 @@ loanDurationTextBox.addEventListener("change", (event) =>
   updateLoanDuration(loanDurationTextBox.value)
 );
 
-initForm();
+window.onload = initForm;

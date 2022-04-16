@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/loan-calc.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -39,7 +41,7 @@
             class="loan-calc-form-input"
           />
         </form>
-        <form class="loan-calc-form">
+        <form class="loan-calc-form time">
           <p>How long do you want to pay it back?</p>
           <input
             type="number"
@@ -54,6 +56,7 @@
             id="loanDurationSlider"
             class="loan-calc-form-input"
           />
+          <input type="submit" value="Apply" class="apply-btn" />
         </form>
       </div>
 
@@ -69,6 +72,7 @@
       </div>
     </div>
 
+    <script src="loanCalcCompute.js"></script>
     <script src="loanCalc.js"></script>
   </body>
 </html>
