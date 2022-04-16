@@ -1,0 +1,18 @@
+.margaphoto {
+  margin-left: 10%;
+  width: 13%;
+}
+
+.hi {
+  margin-left: 30%;
+}
+
+.me {
+  display: flex;
+}
+
+.presentation {
+  margin-left: 5%;
+  margin-right: 30%;
+  text-align: justify;
+}

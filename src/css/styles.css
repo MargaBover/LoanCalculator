@@ -2,7 +2,13 @@
   font-family: "Montserrat", sans-serif;
 }
 
-h1 {
+.title-loan {
   margin-left: 20%;
   margin-top: 5%;
+}
+
+.tesco-img {
+  width: 10%;
+  align-self: flex-end;
+  margin-right: 20%;
 }

@@ -48,7 +48,7 @@ input[type="range"].loan-calc-form-input {
   margin-top: 5%;
   margin-left: 1%;
 
-  background-color: #4caf50; /* Green */
+  background-color: #5584ac;
   border: none;
   color: white;
   padding: 10px 30px;
@@ -57,4 +57,8 @@ input[type="range"].loan-calc-form-input {
   display: inline-block;
   font-size: 16px;
   border-radius: 5px;
+}
+
+.apply-btn:hover {
+  background-color: #22577e;
 }

@@ -7,23 +7,38 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/loan-calc.css" />
+    <link rel="icon" href="img/favicon (1).ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@200;400&family=Nothing+You+Could+Do&family=Sacramento&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>Interview</title>
   </head>
   <body>
     <ul class="horizontal gray">
-      <li><a class="active" href="">Introduction</a></li>
-      <li><a href="">Dia 2</a></li>
-      <li><a href="">Dia 3</a></li>
-      <li><a href="">Dia 4</a></li>
-      <li><a href="">Dia 5</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a href="slide1-introduction.html">Introduction</a>
+      </li>
+      <li>
+        <a href="slide2-figma.html">Prototype</a>
+      </li>
+      <li>
+        <a class="active" href="slide3-html-proto.html">HTML</a>
+      </li>
+      <li>
+        <a href="slide4-js-proto.html">JavaScript</a>
+      </li>
+      <li>
+        <a href="slide5-tests.html">Tests</a>
+      </li>
+      <li>
+        <a href="slide-end.html">Contact</a>
+      </li>
     </ul>
-    <h1>Loan Calculator</h1>
+    <h1 class="title-loan">Loan Calculator</h1>
     <div class="amount-time-loan">
       <div class="amount-time">
         <form class="loan-calc-form">
@@ -31,12 +46,18 @@
           <label for="loanAmountBox">£</label>
           <input
             type="number"
-            name=""
+            name="loanAmount"
+            value="2500"
+            min="1000"
+            max="50000"
             id="loanAmountBox"
             class="loan-calc-form-input"
           />
           <input
             type="range"
+            value="2500"
+            min="1000"
+            max="50000"
             id="loanAmountSlider"
             class="loan-calc-form-input"
           />
@@ -45,14 +66,22 @@
           <p>How long do you want to pay it back?</p>
           <input
             type="number"
-            name=""
+            name="loanDuration"
+            value="24"
+            min="12"
+            max="120"
             id="loanDurationBox"
             class="loan-calc-form-input"
           />
           <label for="loanDurationBox">months</label>
-          <label for="labelDurationBox" id="durationText"></label>
+          <label for="labelDurationBox" id="durationText"
+            >(x years and x months)</label
+          >
           <input
             type="range"
+            value="24"
+            min="12"
+            max="1200"
             id="loanDurationSlider"
             class="loan-calc-form-input"
           />
@@ -62,17 +91,17 @@
 
       <div class="loan-amount">
         <p>Total amount repayable:</p>
-        <p id="totalAmountRepayableText"></p>
+        <p id="totalAmountRepayableText">£ xxx.xx</p>
         <hr />
         <p>Monthly payment:</p>
-        <p id="monthlyPaymentText"></p>
+        <p id="monthlyPaymentText">£ xxx.xx</p>
         <hr />
         <p>Annual interest rate:</p>
-        <p id="interestRateText"></p>
+        <p id="interestRateText">x.xx %</p>
       </div>
     </div>
 
-    <script src="loanCalcCompute.js"></script>
-    <script src="loanCalc.js"></script>
+    <!-- <script src="loanCalcCompute.js"></script>
+    <script src="loanCalc.js"></script> -->
   </body>
 </html>
