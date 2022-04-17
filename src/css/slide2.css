@@ -1,5 +1,7 @@
 .prototypes {
   display: flex;
+  justify-items: center;
+  align-items: center;
 }
 
 .img-prototype {
