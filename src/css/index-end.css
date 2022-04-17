@@ -5,3 +5,9 @@
   justify-content: center;
   margin-top: 10%;
 }
+
+.tesco-img {
+  width: 10%;
+  align-self: flex-end;
+  margin-right: 20%;
+}
