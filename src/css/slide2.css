@@ -1,0 +1,18 @@
+.prototypes {
+  display: flex;
+}
+
+.img-prototype {
+  margin-left: 1%;
+  margin-right: 1%;
+  width: 80%;
+  height: 80%;
+}
+
+.explanation-list li {
+  margin-top: 3%;
+}
+
+.explanation-container {
+  margin-right: 2%;
+}

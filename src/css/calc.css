@@ -1,3 +1,8 @@
+.calc-title {
+  margin-left: 20%;
+  margin-top: 5%;
+}
+
 .amount-time {
   width: 70%;
   border-radius: 5px;
@@ -36,11 +41,11 @@
   text-align: center;
 }
 
-.loan-calc-form {
+.calc-form {
   margin: 3% 0;
 }
 
-.loan-calc-form-input {
+.calc-form-input {
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
@@ -49,13 +54,13 @@
   margin-top: 10%;
 }
 
-input[type="number"].loan-calc-form-input {
+input[type="number"].calc-form-input {
   width: 30%;
   padding: 2%;
   border-radius: 4px;
 }
 
-input[type="range"].loan-calc-form-input {
+input[type="range"].calc-form-input {
   width: 100%;
   height: 5px;
   display: block;

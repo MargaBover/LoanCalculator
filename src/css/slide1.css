@@ -1,0 +1,31 @@
+.hi {
+  margin-top: 5%;
+}
+
+.margaphoto {
+  margin-top: 5%;
+  margin-left: 10%;
+  width: 15%;
+  height: 15%;
+}
+
+.me,
+.what,
+.show {
+  display: flex;
+}
+
+.presentation {
+  text-align: justify;
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 20%;
+}
+
+.show1 {
+  margin: 5% 0 5% 7%;
+}
+
+.show2 {
+  margin: 5% 30% 0 13%;
+}

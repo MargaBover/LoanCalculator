@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="stylesheet" href="css/loan-calc.css" />
+    <link rel="stylesheet" href="css/calc.css" />
     <link rel="icon" href="img/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,10 +41,10 @@
         <a href="slide-end.html">Contact</a>
       </li>
     </ul>
-    <h1 class="title-loan">Loan Calculator</h1>
+    <h1 class="calc-title">Loan Calculator</h1>
     <div class="amount-time-loan">
       <div class="amount-time">
-        <form class="loan-calc-form">
+        <form class="calc-form">
           <p>How much do you need?</p>
           <label for="loanAmountBox">£</label>
           <input
@@ -54,7 +54,7 @@
             min="1000"
             max="50000"
             id="loanAmountBox"
-            class="loan-calc-form-input"
+            class="calc-form-input"
           />
           <input
             type="range"
@@ -62,10 +62,10 @@
             min="1000"
             max="50000"
             id="loanAmountSlider"
-            class="loan-calc-form-input"
+            class="calc-form-input"
           />
         </form>
-        <form class="loan-calc-form time">
+        <form class="calc-form time">
           <p>How long do you want to pay it back?</p>
           <input
             type="number"
@@ -74,7 +74,7 @@
             min="12"
             max="120"
             id="loanDurationBox"
-            class="loan-calc-form-input"
+            class="calc-form-input"
           />
           <label for="loanDurationBox">months</label>
           <label for="labelDurationBox" id="durationText"
@@ -86,7 +86,7 @@
             min="12"
             max="1200"
             id="loanDurationSlider"
-            class="loan-calc-form-input"
+            class="calc-form-input"
           />
           <input type="submit" value="Apply" class="apply-btn" />
         </form>
