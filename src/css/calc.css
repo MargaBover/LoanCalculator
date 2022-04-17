@@ -67,3 +67,7 @@ input[type="range"].calc-form-input {
   border-radius: 1px;
   margin-top: 3%;
 }
+
+.calc-error-msg {
+  color: red;
+}

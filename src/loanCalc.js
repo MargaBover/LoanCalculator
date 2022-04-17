@@ -8,9 +8,12 @@ const totalAmountRepayable = document.getElementById(
 );
 const monthlyPaymentText = document.getElementById("monthlyPaymentText");
 const interestRateText = document.getElementById("interestRateText");
+const calcTimeForm = document.getElementById("calcTimeForm");
+const calcSubmitBtn = document.getElementById("calcSubmitBtn");
 let loanAmount;
 let loanDurationMonths;
 let interestRate = 0.05;
+let errorShow = false;
 
 /**
  * initForm Initialize the values and limit of the loan calculator form.
@@ -55,6 +58,7 @@ const updateLoanAmount = (value) => {
   loanAmount = value;
   loanAmountTextBox.value = value;
   loanAmountSlider.value = value;
+  updateError();
   updateLoanStats();
 };
 
@@ -78,6 +82,29 @@ const computeDurationText = (durationMonths) => {
 };
 
 /**
+ * Update the error msg on the UI
+ */
+const updateError = () => {
+  if (loanAmount < 10000 && loanDurationMonths > 5 * 12) {
+    if (!errorShow) {
+      const errorMsg = document.createElement("p");
+      errorMsg.innerHTML =
+        "Error: The maximum length of a loan in these circumstances is 5 years";
+      errorMsg.className = "calc-error-msg";
+      calcTimeForm.appendChild(errorMsg);
+      calcSubmitBtn.disabled = true;
+      errorShow = true;
+    }
+  } else {
+    if (errorShow) {
+      calcTimeForm.removeChild(calcTimeForm.lastChild);
+      calcSubmitBtn.disabled = false;
+      errorShow = false;
+    }
+  }
+};
+
+/**
  * Update the form with the new loan duration.
  * @param {number} value
  */
@@ -86,6 +113,7 @@ const updateLoanDuration = (value) => {
   loanDurationTextBox.value = value;
   loanDurationSlider.value = value;
   durationText.innerHTML = `(${computeDurationText(value)})`;
+  updateError();
   updateLoanStats();
 };
 
