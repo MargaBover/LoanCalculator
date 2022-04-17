@@ -10,3 +10,8 @@
 .explanation-list li {
   margin-top: 3%;
 }
+
+.explanation-container {
+  margin-left: 10%;
+  margin-right: 10%;
+}
