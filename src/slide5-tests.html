@@ -6,35 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="icon" href="img/favicon (1).ico" />
+    <link rel="stylesheet" href="css/tests.css" />
+    <link rel="icon" href="img/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@200;400&family=Nothing+You+Could+Do&family=Sacramento&display=swap"
       rel="stylesheet"
     />
+    <link
+      class="codestyle"
+      rel="stylesheet"
+      href="https://highlightjs.org/static/demo/styles/rainbow.css"
+    />
     <title>Interview</title>
   </head>
   <body>
     <ul class="horizontal gray">
-        <li><a href="index.html">Home</a></li>
-        <li>
-          <a href="slide1-introduction.html">Introduction</a>
-        </li>
-        <li>
-          <a href="slide2-figma.html">Prototype</a>
-        </li>
-        <li>
-          <a href="slide3-html-proto.html">HTML</a>
-        </li>
-        <li>
-          <a href="slide4-js-proto.html">JavaScript</a>
-        </li>
-        <li>
-          <a class="active" href="slide5-tests.html">Tests</a>
-        </li>
-        <li>
-          <a href="slide-end.html">Contact</a>
-        </li>
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a href="slide1-introduction.html">Introduction</a>
+      </li>
+      <li>
+        <a href="slide2-figma.html">Prototype</a>
+      </li>
+      <li>
+        <a href="slide3-html-proto.html">HTML</a>
+      </li>
+      <li>
+        <a href="slide4-js-proto.html">JavaScript</a>
+      </li>
+      <li>
+        <a class="active" href="slide5-tests.html">Tests</a>
+      </li>
+      <li>
+        <a href="slide6-conclusion.html">Conclusion</a>
+      </li>
+      <li>
+        <a href="slide-end.html">Contact</a>
+      </li>
+    </ul>
+
+    <div class="test1">
+      <pre>
+      <code class="language-js">
+        describe("Loan calculator", () => {
+          test("Test 1 year 5% rate", () => {
+            const loanAmount = 1000;
+            const durationMonths = 12;
+            const anualInterestRate = 0.05;
+            expect(computeLoan(loanAmount, durationMonths, anualInterestRate)).toEqual({
+              monthlyRepayment: (1000 * (1 + 0.05)) / 12,
+              totalOwned: 1000 * (1 + 0.05),
+            });
+          });
+        });
+      </code>
+    </pre>
+    </div>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
   </body>
 </html>
