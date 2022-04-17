@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="stylesheet" href="css/tests.css" />
+    <link rel="stylesheet" href="css/slide5.css" />
     <link rel="icon" href="img/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,7 +47,9 @@
       </li>
     </ul>
 
+    <h1 class="slide-title">Code testing</h1>
     <div class="test1">
+      <h3>Unit test of the loan computation</h3>
       <pre>
       <code class="language-js">
         describe("Loan calculator", () => {
@@ -63,6 +65,24 @@
         });
       </code>
     </pre>
+    </div>
+
+    <div class="explanation-container">
+      <h2>Design principles in practice:</h2>
+      <p>
+        Testing is a very important part of a software developer work. In this
+        project, I wrote a couple of unit test using the testing framework
+        <strong>Jest</strong>.
+      </p>
+      <ul>
+        <li>Unit tests improve code maintainability.</li>
+        <li>It reduces errors and improve deliver quality.</li>
+        <li>Improves collaboration.</li>
+      </ul>
+      <p>
+        Other more powerful testing technique exits for web and App development.
+        They allow integration testing e.g. Those based on browser automation.
+      </p>
     </div>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
