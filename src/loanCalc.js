@@ -12,8 +12,13 @@ let loanAmount;
 let loanDurationMonths;
 let interestRate = 0.05;
 
+/**
+ * initForm Initialize the values and limit of the loan calculator form.
+ *
+ * Future work: Fetch the data from an API.
+ */
 const initForm = () => {
-  const defaultLoanAmount = 2000;
+  const defaultLoanAmount = 3000;
   const minLoanAmount = 1000;
   const maxLoanAmount = 50000;
   const defaultLoanDurationMonths = 12;
@@ -21,32 +26,43 @@ const initForm = () => {
   const maxLoanDurationMonths = 12 * 10;
 
   loanAmount = defaultLoanAmount;
-  loanAmountSlider.value = String(defaultLoanAmount);
-  loanAmountSlider.min = String(minLoanAmount);
-  loanAmountSlider.max = String(maxLoanAmount);
+  loanAmountSlider.min = minLoanAmount;
+  loanAmountSlider.max = maxLoanAmount;
   loanAmountSlider.step = 100;
-  loanAmountTextBox.value = String(defaultLoanAmount);
-  loanAmountTextBox.min = String(minLoanAmount);
-  loanAmountTextBox.max = String(maxLoanAmount);
+  loanAmountSlider.value = defaultLoanAmount;
+
+  loanAmountTextBox.min = minLoanAmount;
+  loanAmountTextBox.max = maxLoanAmount;
+  loanAmountTextBox.value = defaultLoanAmount;
 
   loanDurationMonths = defaultLoanDurationMonths;
-  loanDurationSlider.value = String(defaultLoanDurationMonths);
-  loanDurationSlider.min = String(minLoanDurationMonths);
-  loanDurationSlider.max = String(maxLoanDurationMonths);
-  loanDurationTextBox.value = String(defaultLoanDurationMonths);
-  loanDurationTextBox.min = String(minLoanDurationMonths);
-  loanDurationTextBox.max = String(maxLoanDurationMonths);
+  loanDurationSlider.min = minLoanDurationMonths;
+  loanDurationSlider.max = maxLoanDurationMonths;
+  loanDurationSlider.value = defaultLoanDurationMonths;
+
+  loanDurationTextBox.min = minLoanDurationMonths;
+  loanDurationTextBox.max = maxLoanDurationMonths;
+  loanDurationTextBox.value = defaultLoanDurationMonths;
 
   updateLoanStats();
 };
 
-const updateloanAmount = (value) => {
+/**
+ * Update the form with the new loan amount.
+ * @param {number} value
+ */
+const updateLoanAmount = (value) => {
   loanAmount = value;
   loanAmountTextBox.value = value;
   loanAmountSlider.value = value;
   updateLoanStats();
 };
 
+/**
+ * Formats the loan duration as text in years and months.
+ * @param {number} durationMonths
+ * @returns formated text
+ */
 const computeDurationText = (durationMonths) => {
   const years = Math.floor(durationMonths / 12);
   const months = durationMonths % 12;
@@ -61,6 +77,10 @@ const computeDurationText = (durationMonths) => {
   return `${years} ${yearText}`;
 };
 
+/**
+ * Update the form with the new loan duration.
+ * @param {number} value
+ */
 const updateLoanDuration = (value) => {
   loanDurationMonths = value;
   loanDurationTextBox.value = value;
@@ -69,6 +89,9 @@ const updateLoanDuration = (value) => {
   updateLoanStats();
 };
 
+/**
+ * Update the loan information (Total amount repayable and monthly repayments)
+ */
 const updateLoanStats = () => {
   const loanStat = computeLoan(loanAmount, loanDurationMonths, interestRate);
   totalAmountRepayable.innerHTML = `£ ${loanStat.totalOwned}`;
@@ -76,12 +99,14 @@ const updateLoanStats = () => {
   interestRateText.innerHTML = `${interestRate * 100} %`;
 };
 
+// The event listener handlers
+
 loanAmountSlider.addEventListener("change", (event) =>
-  updateloanAmount(loanAmountSlider.value)
+  updateLoanAmount(loanAmountSlider.value)
 );
 
 loanAmountTextBox.addEventListener("change", (event) =>
-  updateloanAmount(loanAmountTextBox.value)
+  updateLoanAmount(loanAmountTextBox.value)
 );
 
 loanDurationSlider.addEventListener("change", (event) =>
@@ -92,4 +117,4 @@ loanDurationTextBox.addEventListener("change", (event) =>
   updateLoanDuration(loanDurationTextBox.value)
 );
 
-window.onload = initForm;
+window.addEventListener("load", initForm);

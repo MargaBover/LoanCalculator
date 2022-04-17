@@ -1,3 +1,10 @@
+/**
+ * Compute the loan total repayable amount and monthly repayments.
+ * @param {number} loanAmount Total loan amount
+ * @param {number} durationMonths Loan duration in months
+ * @param {number} anualInterestRate Annual interest rate
+ * @returns {object} The monthly repayment and total repayable amount.
+ */
 const computeLoan = (loanAmount, durationMonths, anualInterestRate) => {
   const totalAmountRepayable =
     loanAmount * Math.pow(1 + anualInterestRate, durationMonths / 12);
