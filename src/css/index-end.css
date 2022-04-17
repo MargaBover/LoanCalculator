@@ -11,3 +11,15 @@
   align-self: flex-end;
   margin-right: 20%;
 }
+
+.github-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.github-container {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
