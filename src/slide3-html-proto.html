@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/calc.css" />
+    <link rel="stylesheet" href="css/slide3.css" />
     <link rel="icon" href="img/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,9 +42,10 @@
         <a href="slide-end.html">Contact</a>
       </li>
     </ul>
+
     <h1 class="calc-title">Loan Calculator</h1>
-    <div class="amount-time-loan">
-      <div class="amount-time">
+    <div class="calc-amount-time-loan-container">
+      <div class="calc-amount-time-container">
         <form class="calc-form">
           <p>How much do you need?</p>
           <label for="loanAmountBox">£</label>
@@ -65,7 +67,7 @@
             class="calc-form-input"
           />
         </form>
-        <form class="calc-form time">
+        <form class="calc-form calc-time">
           <p>How long do you want to pay it back?</p>
           <input
             type="number"
@@ -88,11 +90,11 @@
             id="loanDurationSlider"
             class="calc-form-input"
           />
-          <input type="submit" value="Apply" class="apply-btn" />
+          <input type="submit" value="Apply" class="calc-apply-btn" />
         </form>
       </div>
 
-      <div class="loan-amount">
+      <div class="calc-loan-amount-container">
         <p>Total amount repayable:</p>
         <p id="totalAmountRepayableText">£ xxx.xx</p>
         <hr />
@@ -104,7 +106,36 @@
       </div>
     </div>
 
-    <!-- <script src="loanCalcCompute.js"></script>
-    <script src="loanCalc.js"></script> -->
+    <div class="explanation-container">
+      <h2>Design principles in practice:</h2>
+      <ul>
+        <li>
+          Divide and Conquer:
+          <p>
+            Accross this project the different stylesheet files were used for
+            the different parts of the project.
+          </p>
+        </li>
+        <li>
+          Design for portability:
+          <p>
+            Any non-widely supported features in HTML and CSS by the main
+            browsers was avoided.
+          </p>
+        </li>
+        <li>
+          Increase Reusability:
+          <p>
+            The style was separated from the HTML code and a naming prefix was
+            used to avoid name clashing in future uses.
+          </p>
+        </li>
+        <li>Documentation and collaboration:</li>
+        <ul>
+          <li>The code was tracked using git</li>
+          <li>The classes and ids naming was done comprehensively</li>
+        </ul>
+      </ul>
+    </div>
   </body>
 </html>

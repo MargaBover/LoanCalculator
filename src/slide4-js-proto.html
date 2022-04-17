@@ -41,9 +41,10 @@
         <a href="slide-end.html">Contact</a>
       </li>
     </ul>
+
     <h1 class="calc-title">Loan Calculator</h1>
-    <div class="amount-time-loan">
-      <div class="amount-time">
+    <div class="calc-amount-time-loan-container">
+      <div class="calc-amount-time-container">
         <form class="calc-form">
           <p>How much do you need?</p>
           <label for="loanAmountBox">£</label>
@@ -55,7 +56,7 @@
           />
           <input type="range" id="loanAmountSlider" class="calc-form-input" />
         </form>
-        <form class="calc-form time">
+        <form class="calc-form calc-time">
           <p>How long do you want to pay it back?</p>
           <input
             type="number"
@@ -66,11 +67,11 @@
           <label for="loanDurationBox">months</label>
           <label for="labelDurationBox" id="durationText"></label>
           <input type="range" id="loanDurationSlider" class="calc-form-input" />
-          <input type="submit" value="Apply" class="apply-btn" />
+          <input type="submit" value="Apply" class="calc-apply-btn" />
         </form>
       </div>
 
-      <div class="loan-amount">
+      <div class="calc-loan-amount-container">
         <p>Total amount repayable:</p>
         <p id="totalAmountRepayableText"></p>
         <hr />
