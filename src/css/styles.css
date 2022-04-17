@@ -4,5 +4,9 @@
 
 .slide-title {
   margin-left: 5%;
-  margin-top: 5%;
+  margin-top: 3%;
+}
+
+.explanation-list li {
+  margin-top: 3%;
 }
